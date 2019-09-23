@@ -1,1 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+@media screen and (min-width: 480px) {
+body
+{
+background-color: rgb(10, 9, 9);
+
+}
+}
+@media screen and (max-width: 600px) {
+  body {
+    background-color: olive;
+  }
+}
+h1{
+  color: darkgrey;
+  text-decoration-style: dotted;
+  text-align: center;
+}
+h2{
+  color: antiquewhite;
+}
+h3{
+color: blue;
+}
+nav a{
+  overflow: hidden;
+}
+.head{
+float: right;
+display: block;
+text-align: center;
+padding: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .head{
+    float: none;
+    width: 100%;
+  }
+}
+label{
+  color: blue;
+}
