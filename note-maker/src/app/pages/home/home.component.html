@@ -1,15 +1,12 @@
-
 <p>titles:</p>
 <ul>
-  <li *ngFor="let g of titles">
-    {{ g }}
+  <li *ngFor="let g of notes">
+
+  <h3>{{g.id}}</h3>
+  <h4>{{g.title}}</h4>
+  <p>{{g.discription}}</p>
   </li>
 </ul>
-
-<nav>
-  <a routerLink='/'>bullet-note</a>
-  <a routerLink='/'>Discription-note</a>
-</nav>
 
 <br>
   <div class="dropdown">
