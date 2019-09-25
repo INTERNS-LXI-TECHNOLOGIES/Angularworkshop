@@ -1,0 +1,25 @@
+
+<p>titles:</p>
+<ul>
+  <li *ngFor="let g of titles">
+    {{ g }}
+  </li>
+</ul>
+
+<nav>
+  <a routerLink='/'>bullet-note</a>
+  <a routerLink='/'>Discription-note</a>
+</nav>
+
+<br>
+  <div class="dropdown">
+  <button class="dropbtn">Create</button>
+  <div class="dropdown-content">
+    <a routerLink='/bullet'>Bullet Note</a>
+    <a routerLink='/'>Discription Note</a>
+
+
+  </div>
+</div>
+
+<router-outlet></router-outlet>
