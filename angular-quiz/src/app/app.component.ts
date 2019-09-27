@@ -41,4 +41,25 @@ export class AppComponent {
        this.question = this.selectedlanques[this.i].question;
        this.option = this.selectedlanques[this.i].options;
      }
+     marks: number = 0;
+
+     check(str: string)
+     {
+       for (var i = 0; i < this.quizlist.length; i++)
+       {
+         if(str === this.quizlist[i].answer)
+         {
+
+           this.marks++;
+         }
+       }
+     }
+
+     calculatemark()
+     {
+       document.writeln('your score is' + this.marks);
+     }
+
+
 }
+

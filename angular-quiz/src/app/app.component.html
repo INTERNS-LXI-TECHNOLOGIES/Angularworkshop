@@ -1,3 +1,4 @@
+<div>
 <h1>Quiz Application</h1>
 <label>Select Category :</label>
 <select [(ngModel)]="selectedvalue" (change)="gettinglanguage()">
@@ -9,11 +10,12 @@
   </ul>
   <ul *ngFor="let opt of option">
     <label>
-      <input type="checkbox">
+      <input type="checkbox" (click)="check(opt)">
 {{opt}}
 </label>
   </ul>
   <button (click)="previous()" *ngIf="i>0" >previous</button>
   <button (click)="next()" *ngIf="i<quizlength" >next</button>
 </div>
-
+<button (click)="calculatemark()">submit</button>
+</div>
