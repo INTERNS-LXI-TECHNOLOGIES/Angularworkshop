@@ -14,11 +14,17 @@ constructor(private product: ProductService) { }
     this.product.getProducts().subscribe((products: Product[]) => this.products = products);
    }
    delete(id) {
-  this.product.deleteProduct(id).subscribe();
-  console.log('id',id);
+   this.product.deleteProduct(id).subscribe();
+
+   this.products.forEach( data => {
+   })
+   {}
+
+  console.log('id', id);
   }
  /* update() {
    this.product.updateProduct(this.product).subscribe();
  }*/
+
 
 }

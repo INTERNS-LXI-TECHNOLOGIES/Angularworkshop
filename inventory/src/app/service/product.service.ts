@@ -28,5 +28,4 @@ public updateProduct(product) {
 public createProduct(product) {
   return this.httpClient.post(this.url, product, this.httpOptions);
 }
-
 }
