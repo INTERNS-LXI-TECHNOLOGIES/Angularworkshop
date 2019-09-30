@@ -1,0 +1,27 @@
+<nav>
+    <a routerLink="/discription">Discription</a>
+    <a routerLink="/bullet">Bullet</a>
+
+  </nav>
+<h2>My discnotes</h2>
+
+<ul class="notes">
+  <li *ngFor="let note of notes">
+    <span class="badge">{{note.id}}</span> {{note.title}}<br>
+    <p>{{note.discription}}</p>
+    <p>{{note.date}}</p>
+  </li>
+</ul>
+<h2>discription</h2>
+
+<label>Title: <br>
+  <input #title />
+</label> <br>
+<label>Discription: <br>
+  <textarea #discription ></textarea>
+</label> <br>
+<label>Date: <br>
+  <input #date type="date"/>
+</label> <br>
+
+<button (click)="add(title, discription, date)"> add </button>
