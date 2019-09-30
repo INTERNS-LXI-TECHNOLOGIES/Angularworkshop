@@ -1,0 +1,65 @@
+.row {
+  width: 100%;
+}
+
+.col-1 , .col-2 {
+  display: inline-block;
+}
+
+.col-1 {
+  width: 20%;
+}
+
+.col-2 {
+  width: 80%;
+}
+
+
+.todowrapper {
+  border-bottom: 1px solod #efefef;
+  text-align: left;
+  margin-bottom: 10px;
+}
+.removeTodo {
+
+  outline: none;
+  box-shadow: none;
+  border-width: 2px;
+  border-radius: 30px;
+  border-style: solid;
+  padding: 8px;
+  color: rgba(203, 20, 32, 0.4);
+  border-color: rgba(203, 20, 32, 0.4);
+  background-color:transparent;
+}
+.removeTodo:hover{
+ color: red;
+ background-color: mediumturquoise;
+
+}
+.editButtton{
+
+ width: 100%;
+  position: relative;
+  margin: initial;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  outline: none;
+  box-shadow: none;
+  border-width: 10px;
+  border-radius: 36px;
+  border-spacing: 20px;
+  border-style: solid;
+
+  padding: 17px 124px;
+  color: rgba(203, 20, 32, 0.4);
+  border-color: rgba(203, 20, 32, 0.4);
+  background-color:transparent;
+}
+.editButtton:hover{
+  color: midnightblue;
+  background-color: #efefef;
+}
+.line{
+  display: block;
+}
