@@ -21,11 +21,6 @@ export class BulletComponent implements OnInit {
   ngOnInit() {
     this.getNotes();
   }
-  create( title: string, discription: string, date: string ): void {
-    this.noteService.addNote({title, discription, date} as Note)
-    .subscribe(notes => {
-      this.notes.push(notes);
-    });
-}
+
 
 }

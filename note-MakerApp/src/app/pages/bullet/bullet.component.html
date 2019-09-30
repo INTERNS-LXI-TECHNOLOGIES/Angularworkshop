@@ -7,21 +7,14 @@
 
 <ul class="notes">
   <li *ngFor="let note of notes">
-    <span class="badge"></span> {{note.title}}<br>
+    <h4>{{note.title}}</h4>
+    <span class="badge"></span> <input [(ngModel)]="note.title" placeholder="title"><br>
     <p>{{note.discription}}</p>
     <p>{{note.date}}</p>
   </li>
 </ul>
-<h2>Note</h2>
 
-<label>Title: <br>
-  <input #title />
-</label> <br>
-<label>Discription: <br>
-  <textarea #discription ></textarea>
-</label> <br>
-<label>Date: <br>
-  <input #date type="date"/>
-</label> <br>
+<app-create></app-create>
 
-<button (click)="create(title, discription, date)"> add </button>
+
+

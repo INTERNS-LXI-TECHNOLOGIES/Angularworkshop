@@ -1,0 +1,12 @@
+<h1>hello</h1>
+<label>title:<br>
+  <input [(ngModel)]="note.title" placeholder="title"/><br>
+</label>
+<label>Discription: <br>
+  <textarea [(ngModel)]="note.discription" ></textarea>
+</label> <br>
+<label>Date: <br>
+  <input  [(ngModel)]="note.date" type="date"/>
+</label> <br>
+
+<button (click)="create(note)"> add </button>
