@@ -1,0 +1,23 @@
+<h2>Create</h2>
+<label>Language:
+  <input [(ngModel)]="quiz.language" /><br>
+</label>
+<label>Question:
+    <input [(ngModel)]="quiz.question" /><br>
+  </label>
+  <label>option1:
+      <input [(ngModel)]="quiz.options[0]" /><br>
+    </label>
+    <label>option2:
+        <input [(ngModel)]="quiz.options[1]" /><br>
+      </label>
+      <label>option3:
+          <input [(ngModel)]="quiz.options[2]" /><br>
+        </label>
+        <label>option4:
+            <input [(ngModel)]="quiz.options[3]" /><br>
+          </label>
+    <label>Answer:
+        <input [(ngModel)]="quiz.answer" /><br>
+      </label>
+      <button (click)="create(quiz)">add</button>
