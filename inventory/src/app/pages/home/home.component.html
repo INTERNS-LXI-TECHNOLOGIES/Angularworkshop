@@ -4,7 +4,7 @@
     {{i.price}}
     {{i.quantity}}
 
-    <button><a routerLink="/update"></a>update</button>
+    <button (click)="update()" >update</button>
     <button (click)="delete(i.id)" >delete</button></h2>
 </div>
 <button><a routerLink="/create">add</a></button>

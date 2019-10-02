@@ -16,15 +16,14 @@ constructor(private product: ProductService) { }
    delete(id) {
    this.product.deleteProduct(id).subscribe();
 
-   this.products.forEach( data => {
-   })
-   {}
+   this.products = this.products.filter(data => data.id !== id );
 
-  console.log('id', id);
+   console.log('id', id);
   }
- /* update() {
+ update() {
    this.product.updateProduct(this.product).subscribe();
- }*/
+   console.log('FHHGHGGHGHGHGHH');
+ }
 
 
 }
