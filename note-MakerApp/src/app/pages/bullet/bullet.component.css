@@ -17,3 +17,11 @@ nav a:hover {
 nav a.active {
   color: #039be5;
 }
+.note{
+  border-style: solid;
+  border-color: grey;
+  width:25%;
+}
+.bullet{
+  list-style-type: square;
+}

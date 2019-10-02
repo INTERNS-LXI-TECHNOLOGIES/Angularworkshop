@@ -1,0 +1,16 @@
+<h2>add note</h2>
+<label>id:<br>
+  <input [(ngModel)]="notedisc.id" placeholder="id"/><br>
+</label>
+<label>title:<br>
+  <input [(ngModel)]="notedisc.title" placeholder="title"/><br>
+</label>
+<label>Discription: <br>
+  <textarea [(ngModel)]="notedisc.discription" ></textarea>
+</label> <br>
+<label>Date: <br>
+  <input  [(ngModel)]="notedisc.date" type="date"/>
+</label> <br>
+
+
+<button (click)="add(notedisc)"> add </button>

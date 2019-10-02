@@ -2,19 +2,29 @@
     <a routerLink="/discription">Discription</a>
     <a routerLink="/bullet">Bullet</a>
 
-  </nav>
+  </nav><br>
+<app-search></app-search>
 <h2>My BulletNotes</h2>
 
 <ul class="notes">
-  <li *ngFor="let note of notes">
+  <li class="note" *ngFor="let note of notes">
     <h4>{{note.title}}</h4>
-    <span class="badge"></span> <input [(ngModel)]="note.title" placeholder="title"><br>
-    <p>{{note.discription}}</p>
+    <ul><li>{{note.discription}}</li></ul>
+    <!-- <span class="badge"></span> <input [(ngModel)]="note.title" placeholder="title"><br> -->
+    <label>
+      <textarea #discription placeholder="description"></textarea>
+    </label>
+    <button (click)='save(discription.value)'>save</button>
+    <!-- <textarea class="bullet" [(ngModel)]="note.discription" placeholder="title"></textarea> -->
+
     <p>{{note.date}}</p>
+
+    <button (click)='delete(note)'>delete</button>
+
   </li>
 </ul>
 
-<app-create></app-create>
+<app-create (valueChange)="getNotes()"></app-create>
 
 
 

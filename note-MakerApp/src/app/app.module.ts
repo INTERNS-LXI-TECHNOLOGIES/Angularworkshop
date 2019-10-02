@@ -13,6 +13,8 @@ import { DiscriptionComponent } from './pages/discription/discription.component'
 import { BulletComponent } from './pages/bullet/bullet.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CreateComponent } from './pages/create/create.component';
+import { CreatediscComponent } from './pages/createdisc/createdisc.component';
+import { SearchComponent } from './pages/search/search.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,15 @@ import { CreateComponent } from './pages/create/create.component';
 
 
 
-    CreateComponent
+    CreateComponent,
+
+
+
+    CreatediscComponent,
+
+
+
+    SearchComponent
   ],
   imports: [
     BrowserModule,

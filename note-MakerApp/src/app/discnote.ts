@@ -1,4 +1,4 @@
-export interface Note {
+export interface DiscNote {
   id?: number;
   title?: string;
   discription?: string;

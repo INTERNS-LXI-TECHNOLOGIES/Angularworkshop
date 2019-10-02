@@ -1,4 +1,7 @@
-<h1>hello</h1>
+<h2>add note</h2>
+<label>id:<br>
+  <input [(ngModel)]="note.id" placeholder="id"/><br>
+</label>
 <label>title:<br>
   <input [(ngModel)]="note.title" placeholder="title"/><br>
 </label>
@@ -8,5 +11,6 @@
 <label>Date: <br>
   <input  [(ngModel)]="note.date" type="date"/>
 </label> <br>
-
 <button (click)="create(note)"> add </button>
+
+

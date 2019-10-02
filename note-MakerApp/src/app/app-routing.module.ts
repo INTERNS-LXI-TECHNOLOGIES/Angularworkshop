@@ -1,3 +1,4 @@
+import { CreatediscComponent } from './pages/createdisc/createdisc.component';
 
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'discription', component: DiscriptionComponent},
   {path: 'bullet', component: BulletComponent},
   {path: 'create', component: CreateComponent},
+  {path: 'createdisc', component: CreatediscComponent},
 
 
 

@@ -1,6 +1,6 @@
 import { NoteService } from 'src/app/services/note.service';
 import { Component, OnInit } from '@angular/core';
-import { Note } from 'src/app/note';
+import { DiscNote } from 'src/app/discnote';
 
 
 
@@ -11,23 +11,22 @@ import { Note } from 'src/app/note';
 })
 export class DiscriptionComponent implements OnInit {
 
-  notes: Note[];
+  discnotes: DiscNote[];
   constructor(private noteService: NoteService) { }
 
-  getNotes(): void {
-    this.noteService.getNotes()
-        .subscribe(notes => this.notes = notes);
+  getDiscNotes(): void {
+    this.noteService.getDiscNotes()
+        .subscribe(discnotes => this.discnotes = discnotes);
   }
 
   ngOnInit() {
-    this.getNotes();
+    this.getDiscNotes();
   }
-  add( title: string, discription: string, date: string ): void {
-    this.noteService.addNote({title, discription, date} as Note)
-    .subscribe(notes => {
-      this.notes.push(notes);
-    });
-}
+delete(disc: DiscNote): void {
+  this.discnotes = this.discnotes.filter(h => h !== disc);
+    this.noteService.deleteDiscNote(disc).subscribe();
+    console.log('deleted', this.discnotes);
 
+}
 
 }
