@@ -3,8 +3,8 @@
     <h2>{{i.name}}
     {{i.price}}
     {{i.quantity}}
-
-    <button (click)="update()" >update</button>
-    <button (click)="delete(i.id)" >delete</button></h2>
+     <button (click)="routeUpdate(i)" >update</button>
+  <!--<button (click)="update(products)" >update</button>-->
+  <button (click)="delete(i.id)" >delete</button></h2>
 </div>
 <button><a routerLink="/create">add</a></button>
