@@ -23,7 +23,7 @@ export class ProductService {
     return this.httpClient.delete(`${this.url}/${productId}`);
 }
 public updateProduct(product) {
-  return this.httpClient.put(`${this.url}/${product.id}`, product);
+  return this.httpClient.put(`${this.url}/${product.id}`, product , this.httpOptions);
 }
 public createProduct(product) {
   return this.httpClient.post(this.url, product, this.httpOptions);

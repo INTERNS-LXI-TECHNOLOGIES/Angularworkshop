@@ -2,7 +2,7 @@
 <p>price:<input type="text" [(ngModel)]="product.price"></p>
 <p>quandity:<input type="text"[(ngModel)]="product.quantity"></p>
 <div>
-  <button>update</button>
+  <button *ngIf="product.id!=0" (click)="update()">update</button>
 
-  <button (click)="create()">add</button>
+  <button *ngIf="product.id==0" (click)="create()">add</button>
 </div>
