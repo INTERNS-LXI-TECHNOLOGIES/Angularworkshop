@@ -47,6 +47,14 @@ addDiscNote (notediscs: Note): Observable<Note> {
   saveDisc (note: Note): Observable<Note> {
     return this.http.post<Note>(this.notesUrl, note, this.httpOptions);
   }
+    getNote(id: number): Observable<Note> {
+      const url = `${this.notesUrl}/${id}`;
+      return this.http.get<Note>(url);
+  }
+  searchNotes(term: string): Observable<Note[]> {
+    return this.http.get<Note[]>(`${this.notesUrl}/?name=${term}`);
+
+  }
 }
 
 

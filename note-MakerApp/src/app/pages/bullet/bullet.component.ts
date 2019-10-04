@@ -1,4 +1,3 @@
-import { DiscNote } from 'src/app/discnote';
 import { NoteService } from 'src/app/services/note.service';
 import { Component, OnInit } from '@angular/core';
 import { Note } from 'src/app/note';
@@ -31,7 +30,7 @@ export class BulletComponent implements OnInit {
   search(value: string): void {
     console.log('searched');
   }
-  save(discription: string): void {
+  save(discription: string[]): void {
     this.noteService.saveDisc({ discription } as Note)
       .subscribe(note => {
         this.notes.push(note);

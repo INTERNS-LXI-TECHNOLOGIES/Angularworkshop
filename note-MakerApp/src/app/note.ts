@@ -1,7 +1,7 @@
 export interface Note {
   id?: number;
   title?: string;
-  discription?: string;
+  discription?: string[];
   date?: string;
 
 }

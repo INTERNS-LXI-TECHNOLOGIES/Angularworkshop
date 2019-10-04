@@ -9,11 +9,16 @@
 <ul class="notes">
   <li class="note" *ngFor="let note of notes">
     <h4>{{note.title}}</h4>
-    <ul><li>{{note.discription}}</li></ul>
+
+    <ul><li>{{note.discription[0]}}</li>
+    <li>{{note.discription[1]}}</li>
+  <li>{{note.discription[2]}}</li>
+<li>{{note.discription[3]}}</li>
+</ul>
     <!-- <span class="badge"></span> <input [(ngModel)]="note.title" placeholder="title"><br> -->
     <label>
       <textarea #discription placeholder="description"></textarea>
-    </label>
+    </label><br>
     <button (click)='save(discription.value)'>save</button>
     <!-- <textarea class="bullet" [(ngModel)]="note.discription" placeholder="title"></textarea> -->
 

@@ -1,0 +1,19 @@
+<div *ngIf="note">
+
+  <div><span>id: </span>{{note.id}}</div><br>
+  <div>
+    <label>title:
+      <input [(ngModel)]="note.title" placeholder="name"/>
+    </label><br>
+    <label>discription:
+      <input [(ngModel)]="note.discription" placeholder="name"/>
+    </label><br>
+    <label>date:
+      <input [(ngModel)]="note.date" placeholder="name"/>
+    </label>
+
+
+
+  </div>
+  <button (click)="goBack()">go back</button>
+</div>
