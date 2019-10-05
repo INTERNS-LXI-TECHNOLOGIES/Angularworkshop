@@ -16,6 +16,8 @@ import { CreateComponent } from './pages/create/create.component';
 import { CreatediscComponent } from './pages/createdisc/createdisc.component';
 import { SearchComponent } from './pages/search/search.component';
 import { DetailComponent } from './pages/detail/detail.component';
+import { SearchdiscComponent } from './pages/searchdisc/searchdisc.component';
+import { DiscdetailComponent } from './pages/discdetail/discdetail.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,15 @@ import { DetailComponent } from './pages/detail/detail.component';
 
 
 
-    DetailComponent
+    DetailComponent,
+
+
+
+    SearchdiscComponent,
+
+
+
+    DiscdetailComponent
   ],
   imports: [
     BrowserModule,

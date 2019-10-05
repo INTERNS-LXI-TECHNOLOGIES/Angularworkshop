@@ -4,22 +4,21 @@
 
   </nav><br>
 <app-search></app-search>
+<app-create (valueChange)="getNotes()"></app-create>
 <h2>My BulletNotes</h2>
 
 <ul class="notes">
   <li class="note" *ngFor="let note of notes">
     <h4>{{note.title}}</h4>
 
-    <ul><li>{{note.discription[0]}}</li>
-    <li>{{note.discription[1]}}</li>
-  <li>{{note.discription[2]}}</li>
-<li>{{note.discription[3]}}</li>
+    <ul><li *ngFor="let n of note.discription">{{n}}</li>
+
 </ul>
     <!-- <span class="badge"></span> <input [(ngModel)]="note.title" placeholder="title"><br> -->
     <label>
-      <textarea #discription placeholder="description"></textarea>
+      <textarea [(ngModel)]="discription" placeholder="bullet"></textarea>
     </label><br>
-    <button (click)='save(discription.value)'>save</button>
+    <button (click)='save()'>save</button>
     <!-- <textarea class="bullet" [(ngModel)]="note.discription" placeholder="title"></textarea> -->
 
     <p>{{note.date}}</p>
@@ -29,7 +28,7 @@
   </li>
 </ul>
 
-<app-create (valueChange)="getNotes()"></app-create>
+
 
 
 

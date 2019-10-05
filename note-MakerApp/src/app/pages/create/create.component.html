@@ -1,16 +1,13 @@
 <h2>add note</h2>
-<label>id:<br>
-  <input [(ngModel)]="note.id" placeholder="id"/><br>
-</label>
 <label>title:<br>
   <input [(ngModel)]="note.title" placeholder="title"/><br>
 </label>
 <label>Discription: <br>
-  <textarea [(ngModel)]="note.discription" ></textarea>
+  <textarea [(ngModel)]="discription" ></textarea>
 </label> <br>
 <label>Date: <br>
   <input  [(ngModel)]="note.date" type="date"/>
 </label> <br>
-<button (click)="create(note)"> add </button>
+<button (click)="create()"> add </button>
 
 

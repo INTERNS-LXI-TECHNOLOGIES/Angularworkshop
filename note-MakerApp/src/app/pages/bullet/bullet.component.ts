@@ -11,9 +11,12 @@ import { Note } from 'src/app/note';
 export class BulletComponent implements OnInit {
 
   notes: Note[];
+  note: Note = {
+    discription: []
+  };
+  discription = '';
 
   constructor(private noteService: NoteService) { }
-
 
   getNotes(): void {
     this.noteService.getNotes()
@@ -30,10 +33,12 @@ export class BulletComponent implements OnInit {
   search(value: string): void {
     console.log('searched');
   }
-  save(discription: string[]): void {
-    this.noteService.saveDisc({ discription } as Note)
+  save( ): void {
+    this.note.discription.push(this.discription);
+    this.noteService.saveBullet(this.note)
       .subscribe(note => {
-        this.notes.push(note);
+        console.log(this.note.discription);
+        this.notes.push(this.note);
         console.log('saved', this.notes);
       });
   }

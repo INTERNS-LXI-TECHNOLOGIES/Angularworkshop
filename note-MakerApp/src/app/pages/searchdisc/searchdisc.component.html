@@ -1,0 +1,10 @@
+<div>
+  search:<input #value type="text" placeholder="search" (input)=search(value)>
+  <ul class="search-result">
+    <li *ngFor="let disc of discnotes$ | async" >
+      <a routerLink="/discdetail/{{disc.id}}">
+        {{disc.title}}
+      </a>
+    </li>
+  </ul>
+  </div>

@@ -9,8 +9,8 @@ export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const notes = [
       { id: 1, title: 'title1' , discription: ['this is my first title', 'goooo', 'gooo', 'goooo'], date: '24/9/19'},
-      { id: 2, title: 'title2' , discription: ['this is my second title'], date: '24/9/19'},
-      { id: 3, title: 'title3' , discription: ['this is my third title'], date: '24/9/19'},
+      { id: 2, title: 'title2' , discription: ['this is my second title', 'better'], date: '24/9/19'},
+      { id: 3, title: 'title3' , discription: ['this is my third title', 'important'], date: '24/9/19'},
 
     ];
     const discnotes = [

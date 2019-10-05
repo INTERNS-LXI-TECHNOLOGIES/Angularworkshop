@@ -24,7 +24,7 @@ export class CreatediscComponent implements OnInit {
         this.getDiscNotes();
       }
 
-      add(notedisc: DiscNote): void {
+      add(): void {
         this.noteService.addDiscNote(this.notedisc)
         .subscribe(notediscs => {
           this.notediscs.push(notediscs);

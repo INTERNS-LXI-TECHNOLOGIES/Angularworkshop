@@ -2,7 +2,9 @@
     <a routerLink="/discription">Discription</a>
     <a routerLink="/bullet">Bullet</a>
 
-  </nav>
+  </nav><br>
+  <app-searchdisc></app-searchdisc>
+  <app-createdisc (Change)="getDiscNotes()"></app-createdisc>
 <h2>My discnotes</h2>
 
 <ul class="discnotes">
@@ -13,5 +15,5 @@
     <button (click)='delete(disc)'>delete</button>
   </li>
 </ul>
-<app-createdisc (Change)="getDiscNotes()"></app-createdisc>
+
 

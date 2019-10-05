@@ -10,6 +10,7 @@ import { Note } from 'src/app/note';
   styleUrls: ['./detail.component.css']
 })
 export class DetailComponent implements OnInit {
+  discription = '';
 
   @Input() note: Note;
 
@@ -30,6 +31,11 @@ export class DetailComponent implements OnInit {
   goBack(): void {
     this.location.back();
 
+  }
+  saveChanges(): void {
+    this.note.discription.push(this.discription);
+    this.noteService.updateNote(this.note)
+    .subscribe(() => this.goBack());
   }
 
 }

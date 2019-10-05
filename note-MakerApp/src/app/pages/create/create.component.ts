@@ -11,9 +11,14 @@ import { NoteService } from 'src/app/services/note.service';
 
 export class CreateComponent implements OnInit {
   notes: Note[];
-  note: Note = {};
+  note: Note = {
+    discription:[]
+  };
+  discription = '';
+
 
   @Output() valueChange = new EventEmitter();
+
 
   constructor(private noteService: NoteService) { }
 
@@ -23,17 +28,27 @@ export class CreateComponent implements OnInit {
       }
 
       ngOnInit() {
+        this.note = {
+          id: 0,
+          date: '',
+          discription: [],
+          title: ''
+        };
         this.getNotes();
       }
 
-      create( note: Note ): void {
+      create(): void {
+        this.note.discription.push(this.discription);
         this.noteService.addNote(this.note)
         .subscribe(notes => {
-          this.notes.push(notes);
+          console.log(this.note.discription);
+          this.notes.push(this.note);
+          console.log(this.notes);
           this.valueChange.emit();
     });
 
-    console.log('added', this.note);
+    console.log('added', this.notes);
   }
-}
 
+
+}

@@ -1,0 +1,22 @@
+<div *ngIf="discnote">
+
+  <div><span>id: </span>{{discnote.id}}</div><br>
+  <div>
+    <label>title:
+      <input [(ngModel)]="discnote.title" placeholder="name"/>
+    </label><br>
+    <label>discription:
+      <input [(ngModel)]="discnote.discription" placeholder="name"/>
+    </label><br>
+    <label>date:
+      <input [(ngModel)]="discnote.date" placeholder="name"/>
+    </label>
+
+
+
+  </div>
+  <button (click)="Back()">go back</button>
+</div>
+<div>
+<button (click)="saveChange()">save</button>
+</div>

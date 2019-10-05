@@ -1,3 +1,4 @@
+import { DiscdetailComponent } from './pages/discdetail/discdetail.component';
 import { CreatediscComponent } from './pages/createdisc/createdisc.component';
 
 import { NgModule } from '@angular/core';
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'discription', component: DiscriptionComponent},
   {path: 'detail/:id', component: DetailComponent },
+  {path: 'discdetail/:id', component: DiscdetailComponent},
   {path: 'bullet', component: BulletComponent},
   {path: 'create', component: CreateComponent},
   {path: 'createdisc', component: CreatediscComponent},
