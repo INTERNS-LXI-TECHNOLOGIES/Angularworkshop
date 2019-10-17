@@ -1,0 +1,41 @@
+button {
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+  font-family: Arial;
+
+  height:20px;
+  width:60px;
+  margin: -20px -50px;
+  position:relative;
+  top:50%;
+  left:50%;
+}
+
+
+
+div {
+  background-color: lightgrey;
+  width: 300px;
+  border: 15px solid rgb(90, 92, 90);
+  padding: 50px;
+  margin: 30px;
+
+  align-items: center;
+}
+ label{
+
+  text-align: right;
+
+}
+ input{
+
+  text-align: left;
+ }
+
+ .container {
+  justify-content: center;
+}

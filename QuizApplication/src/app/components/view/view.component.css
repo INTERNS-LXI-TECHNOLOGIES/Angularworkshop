@@ -1,0 +1,19 @@
+
+
+button.delete {
+  position: relative;
+  background-color: gray !important;
+  color: white;
+}
+ a {
+  color: #333;
+  text-decoration: none;
+  position: relative;
+
+  width: 250px;
+}
+
+ a:hover {
+  color:#607D8B;
+}
+

@@ -1,0 +1,24 @@
+
+
+  <fieldset>
+<legend>Edit</legend>
+<div *ngIf="qu">
+
+    <div><span>id: </span>{{qu.id}}</div><br>
+    <div>
+        <label>name:
+          <input [(ngModel)]="qu.question" placeholder="question"/><br><br>
+        </label>
+        <label>options:
+        <input [(ngModel)]="qu.options" placeholder="options" /><br><br>
+        </label>
+        <label>Answer:
+            <input [(ngModel)]="qu.answer" placeholder="answer" /><br><br>
+            </label>
+      </div>
+      <button (click)="goBack()">go back</button>
+  <button (click)="save()">save</button>
+
+</div>
+</fieldset>
+

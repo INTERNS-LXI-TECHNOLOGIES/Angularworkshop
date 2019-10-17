@@ -1,0 +1,18 @@
+
+<div>
+  <app-create (valueChange) = "getQuizes()"></app-create>
+  <fieldset>
+      <legend><h1>View-All</h1></legend>
+  <ul *ngFor="let qu of quizes">
+    <a routerLink="/edit/{{qu.id}}">
+    {{qu.id}}
+    {{qu.question}}
+    {{qu.options}}
+    {{qu.answer}}
+  </a>
+    <button class="delete" (click)="delete(qu)">x</button>
+
+  </ul>
+</fieldset>
+</div>
+
