@@ -19,7 +19,7 @@ import java.util.Optional;
  * REST controller for managing Beverage.
  */
 @RestController
-@RequestMapping("/apis")
+@RequestMapping("/api")
 public class BeverageResource {
 
     private final Logger log = LoggerFactory.getLogger(BeverageResource.class);

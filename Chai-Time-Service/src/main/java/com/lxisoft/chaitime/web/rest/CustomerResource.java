@@ -19,7 +19,7 @@ import java.util.Optional;
  * REST controller for managing Customer.
  */
 @RestController
-@RequestMapping("/apis")
+@RequestMapping("/api")
 public class CustomerResource {
 
     private final Logger log = LoggerFactory.getLogger(CustomerResource.class);

@@ -19,7 +19,7 @@ import java.util.Optional;
  * REST controller for managing Seller.
  */
 @RestController
-@RequestMapping("/apis")
+@RequestMapping("/api")
 public class SellerResource {
 
     private final Logger log = LoggerFactory.getLogger(SellerResource.class);
