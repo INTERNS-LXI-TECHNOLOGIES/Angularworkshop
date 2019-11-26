@@ -1,0 +1,30 @@
+<div >
+  <div class="media">
+  <span class="checkbox">
+    <input type="checkbox" [(ngModel)]="value.done"/>
+  </span>
+  <h3 class="h3-responsive font-weight-bold mr-3">
+    <s *ngIf="value.done">{{ value.time }}</s>
+    <p *ngIf="!value.done">{{ value.time }}</p>
+  </h3>
+  <div class="media-body mb-3 " (click)="updateEventTrigger()">
+    <mdb-badge (click)="handleDeleteClick()" danger="true" class="text-center float-right">-</mdb-badge>
+       <h6 class="mt-0 font-weight-bold">
+         <s *ngIf="value.done">{{ value.subject }}</s>
+         <p *ngIf="!value.done">{{ value.subject }}</p>
+        </h6>
+    <hr class="hr-bold mb-0 my-2" />
+    <h4 class="mb-0" *ngIf="value.location">
+      <mdb-icon fas icon="location-arrow"></mdb-icon>
+     <s *ngIf="value.done"> {{ value.location }}</s>
+     <p *ngIf="!value.done"> {{ value.location }}</p>
+    </h4>
+  </div>
+</div>
+<h5 class="p-3 blue-grey lighten-5 blue-grey lighten-5" *ngIf="value.description">
+
+  <s *ngIf="value.done">{{ value.description }}</s>
+  <p *ngIf="!value.done" >{{ value.description }}</p>
+</h5>
+</div>
+
