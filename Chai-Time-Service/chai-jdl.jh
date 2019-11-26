@@ -1,0 +1,35 @@
+
+
+
+
+entity Beverage {
+	id Long
+	name String,
+    price Long
+}
+entity Customer {
+	name String,
+	id Long,
+    password String
+}
+
+entity Seller {
+	id Long,
+    name String
+}
+
+entity Order {
+	idpcode String,
+    date Instant,
+    total Long
+}
+
+relationship OneToMany {
+	Order{beverage} to Beverage
+}
+
+relationship OneToOne {
+	Customer{order} to Order
+    Order{seller} to Seller
+}
+

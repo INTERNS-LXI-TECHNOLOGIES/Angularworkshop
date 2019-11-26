@@ -1,0 +1,42 @@
+{
+    "name": "Order",
+    "fields": [
+        {
+            "fieldName": "idpcode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "date",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "total",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "seller",
+            "otherEntityRelationshipName": "order",
+            "relationshipName": "seller",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "beverage",
+            "otherEntityRelationshipName": "order",
+            "relationshipName": "beverage"
+        }
+    ],
+    "changelogDate": "20191126054337",
+    "entityTableName": "order",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,35 @@
+{
+    "generator-jhipster": {
+        "promptValues": {
+            "packageName": "com.lxisoft.chaitime"
+        },
+        "jhipsterVersion": "5.8.2",
+        "applicationType": "monolith",
+        "baseName": "ChaiTime",
+        "packageName": "com.lxisoft.chaitime",
+        "packageFolder": "com/lxisoft/chaitime",
+        "serverPort": "8080",
+        "authenticationType": "jwt",
+        "cacheProvider": "no",
+        "websocket": false,
+        "databaseType": "sql",
+        "devDatabaseType": "mysql",
+        "prodDatabaseType": "mysql",
+        "searchEngine": false,
+        "messageBroker": false,
+        "serviceDiscoveryType": false,
+        "buildTool": "maven",
+        "enableSwaggerCodegen": false,
+        "jwtSecretKey": "OTRhMjhlMjZiMTFlZTVlODE3MzMwZDQ4MDU1NDI1NTY5OTYwZjg2NzZlOTBmOWY3MGFlMmY2MmNhZDk1ZDhhNDczODZlYjIxYmIyYTJiYWYwZDMwZmUxODA4MmY5NGQ1MjUzM2Y3YTVlNjFkY2Q3NDZlZWM2Nzc3OTYzMjg4ZDU=",
+        "clientFramework": "angularX",
+        "useSass": false,
+        "clientPackageManager": "npm",
+        "testFrameworks": [],
+        "jhiPrefix": "jhi",
+        "entitySuffix": "",
+        "dtoSuffix": "DTO",
+        "otherModules": [],
+        "enableTranslation": false,
+        "enableHibernateCache": false
+    }
+}
