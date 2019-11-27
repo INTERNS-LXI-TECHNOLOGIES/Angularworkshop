@@ -13,13 +13,18 @@ export class AppComponent {
   public appPages = [
     {
       title: 'Home',
-      url: '/home',
+      url: 'tabs/home',
       icon: 'home'
     },
     {
       title: 'List',
       url: '/list',
       icon: 'list'
+    },
+    {
+      title: 'Catagory',
+      url: 'tabs/order',
+      icon: 'cart'
     }
   ];
 

@@ -5,6 +5,10 @@ import { ApiConfiguration, ApiConfigurationInterface } from './api-configuration
 
 import { AccountResourceService } from './services/account-resource.service';
 import { UserJwtControllerService } from './services/user-jwt-controller.service';
+import { BeverageResourceService } from './services/beverage-resource.service';
+import { CustomerResourceService } from './services/customer-resource.service';
+import { OrderResourceService } from './services/order-resource.service';
+import { SellerResourceService } from './services/seller-resource.service';
 import { UserResourceService } from './services/user-resource.service';
 
 /**
@@ -22,6 +26,10 @@ import { UserResourceService } from './services/user-resource.service';
     ApiConfiguration,
     AccountResourceService,
     UserJwtControllerService,
+    BeverageResourceService,
+    CustomerResourceService,
+    OrderResourceService,
+    SellerResourceService,
     UserResourceService
   ],
 })
