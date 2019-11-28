@@ -1,3 +1,4 @@
+import { AddproductComponent } from './../../components/addproduct/addproduct.component';
 import { ComponentsModule } from './../../components/components.module';
 
 import { NgModule } from '@angular/core';
@@ -21,5 +22,6 @@ import { BeveragePage } from './beverage.page';
     ComponentsModule
   ],
   declarations: [BeveragePage],
+  entryComponents: [AddproductComponent]
 })
 export class BeveragePageModule {}
