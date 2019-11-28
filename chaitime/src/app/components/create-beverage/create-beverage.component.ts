@@ -1,4 +1,7 @@
+import { Beverage } from './../../api/models/beverage';
+import { ModalController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
+import { BeverageResourceService } from 'src/app/api/services';
 
 @Component({
   selector: 'app-create-beverage',
@@ -7,8 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateBeverageComponent implements OnInit {
 
-  constructor() { }
+  beverage: Beverage = {};
+  constructor(
+    private modal: ModalController,
+    private beverageService: BeverageResourceService
+    ) { }
 
   ngOnInit() {}
+
+
+  closemodal() {
+    this.modal.dismiss();
+  }
+
+  save() {
+    this.beverageService.createBeverageUsingPOST(this.beverage).subscribe();
+  }
 
 }
