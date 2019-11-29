@@ -15,7 +15,6 @@ export class CreateBeverageComponent implements OnInit {
     private modal: ModalController,
     private beverageService: BeverageResourceService
     ) { }
-
   ngOnInit() {}
 
 
@@ -25,6 +24,7 @@ export class CreateBeverageComponent implements OnInit {
 
   save() {
     this.beverageService.createBeverageUsingPOST(this.beverage).subscribe();
+    this.modal.dismiss(this.beverage);
   }
 
 }

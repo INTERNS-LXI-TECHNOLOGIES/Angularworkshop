@@ -22,11 +22,13 @@ export class BeveragePage implements OnInit {
     const modal = await this.modalController.create({
       component: CreateBeverageComponent
     });
+    modal.onDidDismiss().then(res => this.beverages.push(res.data));
     return await modal.present();
   }
 
   delete(id: number) {
     this.beverageResourceService.deleteBeverageUsingDELETE(id).subscribe();
+    this.beverages = this.beverages.filter(bev => id !== bev.id);
   }
 
 }
