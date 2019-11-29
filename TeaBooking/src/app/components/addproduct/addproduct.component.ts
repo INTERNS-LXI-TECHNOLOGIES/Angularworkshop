@@ -17,13 +17,12 @@ export class AddproductComponent implements OnInit {
 
   save() {
     this.beverageService.createBeverageUsingPOST(this.beverage).subscribe();
+    this.modalController.dismiss(this.beverage);
   }
   dismiss() {
     // using the injected ModalController this page
     // can "dismiss" itself and optionally pass back data
-    this.modalController.dismiss({
-      dismissed: true
-    });
+    this.modalController.dismiss();
   }
 
 }

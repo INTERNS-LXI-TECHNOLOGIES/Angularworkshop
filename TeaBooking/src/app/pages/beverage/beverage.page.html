@@ -5,6 +5,24 @@
 </ion-header>
 
 <ion-content>
+    <ion-list>
+        
+          <ion-card *ngFor="let b of beverages">
+          <ion-card-content >
+          <ion-item>
+            <ion-text>{{b.name}}</ion-text>
+          </ion-item>
+          <ion-item>
+            <ion-text>{{b.price}}</ion-text>
+          </ion-item>
+          <ion-item>
+              <ion-buttons slot="end" (click)="delete(b.id)" ><ion-icon name="trash" ></ion-icon></ion-buttons>
+          </ion-item>
+          
+        </ion-card-content>
+        </ion-card>
+        
+      </ion-list>
 
     <ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)="presentModal()">
         <ion-fab-button>
