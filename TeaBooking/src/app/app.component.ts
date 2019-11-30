@@ -23,7 +23,12 @@ export class AppComponent {
     },
     {
       title: 'Catagory',
-      url: 'tabs/order',
+      url: '/catagory',
+      icon: 'clipboard'
+    },
+    {
+      title: 'order',
+      url: '/order',
       icon: 'cart'
     }
   ];

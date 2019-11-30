@@ -13,6 +13,8 @@ export class BeveragePage implements OnInit {
 
   beverages: Beverage [] = [];
 
+  editable =  true;
+
   constructor(public modalController: ModalController,
               private beverageService: BeverageResourceService) { }
 
@@ -31,7 +33,14 @@ export class BeveragePage implements OnInit {
     this.beverages = this.beverages.filter(bev => bev.id !== id);
 
   }
+  update(bev) {
+    this.beverageService.updateBeverageUsingPUT(bev).subscribe();
 
 
-
+  }
+  
+  toggleEditable() {
+    this.editable = !this.editable;
+  }
+  
 }

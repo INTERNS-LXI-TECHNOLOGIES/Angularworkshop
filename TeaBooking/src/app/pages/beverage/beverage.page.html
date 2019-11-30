@@ -1,6 +1,9 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>beverage</ion-title>
+    <ion-item>
+        <ion-icon ios="ios-arrow-back" md="md-arrow-back" [routerLink]="['/catagory']"></ion-icon>
+        <ion-searchbar class="search"></ion-searchbar>
+    </ion-item>
   </ion-toolbar>
 </ion-header>
 
@@ -9,13 +12,19 @@
         
           <ion-card *ngFor="let b of beverages">
           <ion-card-content >
+              <ion-item>
+                  <ion-buttons slot="end" (click)="update(b)" ><ion-icon name="checkmark"></ion-icon></ion-buttons>
+              </ion-item>
           <ion-item>
-            <ion-text>{{b.name}}</ion-text>
+            <ion-input [readonly]="editable" [(ngModel)]="b.name"></ion-input>
           </ion-item>
           <ion-item>
-            <ion-text>{{b.price}}</ion-text>
+            <ion-input [readonly]="editable" [(ngModel)]="b.price"></ion-input>
           </ion-item>
+          
           <ion-item>
+              <ion-buttons slot="start" (click)="toggleEditable()"   ><ion-icon name="create" ></ion-icon></ion-buttons>
+          
               <ion-buttons slot="end" (click)="delete(b.id)" ><ion-icon name="trash" ></ion-icon></ion-buttons>
           </ion-item>
           
