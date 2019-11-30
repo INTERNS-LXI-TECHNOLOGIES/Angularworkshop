@@ -12,13 +12,15 @@
       <ion-item> 
             <ion-text>{{beverage.name}}</ion-text>
             <ion-text slot="end">&#x20B9; {{beverage.price}}</ion-text>
-            <ion-button (click)="delete(beverage.id)"  slot="end" fill= "none"><ion-icon slot="icon-only" color="danger" name="trash"></ion-icon></ion-button>
+            <ion-button (click)="presentModal(beverage)" slot="end" fill="non" ><ion-icon slot="icon-only" color="primary" name="create"></ion-icon></ion-button>
+            <ion-button (click)="presentAlertConfirm(beverage.id)"  slot="end" fill= "non"><ion-icon slot="icon-only" color="danger" name="trash"></ion-icon></ion-button>
           </ion-item>
         </ion-card>
 </ion-content>
 
 <ion-fab vertical="bottom" horizontal="start" slot="fixed">
-    <ion-fab-button (click)="presentModal()" >
+    <ion-fab-button (click)="presentModal({})" >
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>
+  

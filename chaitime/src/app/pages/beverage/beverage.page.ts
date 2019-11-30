@@ -1,6 +1,6 @@
 import { Beverage } from './../../api/models/beverage';
 import { CreateBeverageComponent } from './../../components/create-beverage/create-beverage.component';
-import { ModalController } from '@ionic/angular';
+import { ModalController, AlertController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
 import { BeverageResourceService } from 'src/app/api/services';
 
@@ -12,17 +12,34 @@ import { BeverageResourceService } from 'src/app/api/services';
 export class BeveragePage implements OnInit {
 
   beverages: Beverage[] = [];
-  constructor(public modalController: ModalController, private beverageResourceService: BeverageResourceService) { }
+  constructor(public modalController: ModalController,
+              private beverageResourceService: BeverageResourceService,
+              private alert: AlertController
+              ) { }
 
   ngOnInit() {
       this.beverageResourceService.getAllBeveragesUsingGET().subscribe(bev => this.beverages = bev);
   }
 
-  async presentModal() {
+  async presentModal(beverage) {
+    let update = false;
     const modal = await this.modalController.create({
-      component: CreateBeverageComponent
+      component: CreateBeverageComponent,
+      componentProps : {
+        beverage
+      }
     });
-    modal.onDidDismiss().then(res => this.beverages.push(res.data));
+    modal.onDidDismiss().then(res => {
+      this.beverages.forEach(data => {
+        if (data.id === beverage.id) {
+          update = true;
+          this.beverages[this.beverages.indexOf(data)] = res.data;
+        }
+     });
+      if (!update && res.data) {
+      this.beverages.push(res.data);
+     }
+    });
     return await modal.present();
   }
 
@@ -30,5 +47,24 @@ export class BeveragePage implements OnInit {
     this.beverageResourceService.deleteBeverageUsingDELETE(id).subscribe();
     this.beverages = this.beverages.filter(bev => id !== bev.id);
   }
+  
+  async presentAlertConfirm(id) {
+    const alert = await this.alert.create({
+      header: 'Delete',
+      message: 'Are you sure ?',
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel'
+        }, {
+          text: 'Okay',
+          handler: () => {
+            this.delete(id);
+          }
+        }
+      ]
+    });
 
+    await alert.present();
+  }
 }
