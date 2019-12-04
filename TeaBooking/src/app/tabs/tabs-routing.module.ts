@@ -18,27 +18,27 @@ const routes: Routes = [
               }
             ]
           },
-          // {
-          //   path: 'order',
-          //   children: [
-          //     {
-          //       path: '',
-          //       loadChildren: () =>
-          //         import('../pages/catagory/catagory.module').then(m => m.CatagoryPageModule)
+          {
+            path: 'order',
+            children: [
+              {
+                path: '',
+                loadChildren: () =>
+                  import('../pages/order/order.module').then(m => m.OrderPageModule)
 
-          //     }
-          //   ]
-          // },
+              }
+            ]
+          },
           {
             path: '',
             redirectTo: 'tabs/home',
             pathMatch: 'full'
           },
-          // {
-          //   path: 'order',
-          //   redirectTo: 'tabs/order',
-          //   pathMatch: 'full'
-          // }
+          {
+            path: 'order',
+            redirectTo: 'tabs/order',
+            pathMatch: 'full'
+          }
         ]
         },
         {

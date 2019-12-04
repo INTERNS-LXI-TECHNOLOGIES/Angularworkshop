@@ -38,9 +38,9 @@ export class BeveragePage implements OnInit {
 
 
   }
-  
+
   toggleEditable() {
     this.editable = !this.editable;
   }
-  
+
 }

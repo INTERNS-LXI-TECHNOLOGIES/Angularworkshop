@@ -28,7 +28,7 @@ export class AppComponent {
     },
     {
       title: 'order',
-      url: '/order',
+      url: 'tabs/order',
       icon: 'cart'
     }
   ];

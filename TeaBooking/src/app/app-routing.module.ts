@@ -14,7 +14,7 @@ const routes: Routes = [
     path: 'list',
     loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
   },
-  
+
   {
     path: 'catagory',
     loadChildren: () => import('./pages/catagory/catagory.module').then( m => m.CatagoryPageModule)
@@ -23,8 +23,11 @@ const routes: Routes = [
     path: 'beverage',
     loadChildren: () => import('./pages/beverage/beverage.module').then( m => m.BeveragePageModule)
   },
-  
-  
+  {
+    path: 'order',
+    loadChildren: () => import('./pages/order/order.module').then( m => m.OrderPageModule)
+  },
+
 ];
 
 @NgModule({
