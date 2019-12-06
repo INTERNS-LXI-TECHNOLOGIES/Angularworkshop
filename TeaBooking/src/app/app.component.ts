@@ -1,3 +1,4 @@
+// import { MypipePipe } from './mypipe.pipe';
 import { Component } from '@angular/core';
 
 import { Platform } from '@ionic/angular';
