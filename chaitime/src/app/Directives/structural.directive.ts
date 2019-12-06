@@ -1,10 +1,9 @@
-import { Directive } from '@angular/core';
+import { Directive, ElementRef, HostListener } from '@angular/core';
+
 
 @Directive({
   selector: '[appStructural]'
 })
 export class StructuralDirective {
-
-  constructor() { }
-
+  constructor(private el: ElementRef) {}
 }

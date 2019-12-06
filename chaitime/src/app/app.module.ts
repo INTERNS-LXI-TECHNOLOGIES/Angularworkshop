@@ -9,11 +9,10 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-import { DirectiveDirective } from './Directives/directive.directive';
 import { StructuralDirective } from './Directives/structural.directive';
 
 @NgModule({
-  declarations: [AppComponent, DirectiveDirective, StructuralDirective],
+  declarations: [AppComponent, StructuralDirective],
   entryComponents: [],
   imports: [
     BrowserModule,
