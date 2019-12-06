@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button color="primary"></ion-menu-button>
+        </ion-buttons>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item *ngFor="let a of [1,2,3,4]" color="dark"> 
+         <ion-card  class="ion-no-padding" font-weight="bold" color="light">              
+        <ion-card-header text-center >
+            <ion-img class="home" src="/assets/hometea.jfif" color="warning"></ion-img>
+        </ion-card-header>
+        <ion-card-content text-center color="light">
+            <ion-text class="text" font-weight="bold">
+                <h2>Coffe</h2>
+            </ion-text>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+
+ 
+</ion-content>
