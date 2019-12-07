@@ -12,7 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { StructuralDirective } from './Directives/structural.directive';
 
 @NgModule({
-  declarations: [AppComponent, StructuralDirective],
+  declarations: [AppComponent],
   entryComponents: [],
   imports: [
     BrowserModule,
