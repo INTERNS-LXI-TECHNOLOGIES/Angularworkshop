@@ -10,7 +10,7 @@ export class StructuralDirective {
   }
   @HostListener('mouseleave')
   onMouseLeave() {
-    this.structural('null');
+    this.structural('pink');
   }
   private structural(color: string) {
     this.el.nativeElement.style.backgroundColor = color;
