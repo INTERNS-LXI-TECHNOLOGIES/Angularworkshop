@@ -13,7 +13,7 @@
           <ion-card *ngFor="let b of beverages">
           <ion-card-content >
               <ion-item>
-                  <ion-buttons slot="end" (click)="update(b)" ><ion-icon name="checkmark"></ion-icon></ion-buttons>
+                  <ion-buttons slot="end" (click)="update(b)"  ><ion-icon name="checkmark"></ion-icon></ion-buttons>
               </ion-item>
           <ion-item>
             <ion-input [readonly]="editable" [(ngModel)]="b.name"></ion-input>
