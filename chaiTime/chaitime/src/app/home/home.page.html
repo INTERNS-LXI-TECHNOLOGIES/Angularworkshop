@@ -23,5 +23,33 @@
       </ion-card>
     </ion-item>
 
- 
+    
 </ion-content>
+
+
+<ion-footer>
+    <ion-toolbar>  
+        <ion-buttons slot="start">           
+        </ion-buttons>  
+        <ion-toolbar>  
+            <ion-segment (ionChange)="segmentChanged($event)" [(ngModel)]="segment" color="primary">  
+              <ion-segment-button value="0">  
+                <ion-label>Home</ion-label>  
+                <ion-icon name="home"></ion-icon>  
+              </ion-segment-button>  
+              <ion-segment-button value="1">  
+                <ion-label>Category</ion-label>  
+                <ion-icon name="list"></ion-icon>  
+              </ion-segment-button>  
+              <ion-segment-button value="2">  
+                <ion-label>Order</ion-label>  
+                <ion-icon name="cart"></ion-icon>  
+              </ion-segment-button>    
+            </ion-segment>  
+          </ion-toolbar>  
+            
+          <ion-slides #slides (ionSlideDidChange)="slideChanged()" scrollbar="true">   
+          </ion-slides>  
+     
+      </ion-toolbar> 
+</ion-footer>

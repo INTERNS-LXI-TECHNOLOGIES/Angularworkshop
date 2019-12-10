@@ -3,7 +3,7 @@
     <ion-title>Add product</ion-title>
   </ion-toolbar>
   <ion-fab  vertical="top" horizontal="end" slot="fixed">
-      <ion-fab-button color="danger" class="close" (click)="dismiss()">
+      <ion-fab-button color="danger" class="closew" (click)="dismiss()">
         <ion-icon name="close"></ion-icon>
       </ion-fab-button>
     </ion-fab>
@@ -19,7 +19,8 @@
   <ion-input [(ngModel)]="beverages.price"></ion-input>
 </ion-item>
 <ion-item>
-  <ion-button slot= "end" expand="full" shape="round" size="medium" (click)="saveModal()">Add</ion-button>
+  <ion-button *ngIf="!updateMode" slot= "end" expand="full" shape="round" size="medium"   (click)="saveModal()">Add</ion-button>
+  <ion-button *ngIf="updateMode" slot= "end" expand="full" shape="round" size="medium"   (click)="saveModal()">Update</ion-button>
 </ion-item>
 </div>
 </ion-content>

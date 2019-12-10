@@ -1,3 +1,4 @@
+import { CapitalizePipe } from './../../pipes/capitalize.pipe';
 import { AddCategoryComponent } from './../../components/add-category/add-category.component';
 import { ComponentsModule } from './../../components/components.module';
 
@@ -19,9 +20,9 @@ import { BeveragePage } from './beverage.page';
     FormsModule,
     IonicModule,
     BeveragePageRoutingModule,
-    ComponentsModule
+    ComponentsModule,
   ],
-  declarations: [BeveragePage],
+  declarations: [BeveragePage,CapitalizePipe],
   entryComponents: [AddCategoryComponent]
 })
 export class BeveragePageModule {}

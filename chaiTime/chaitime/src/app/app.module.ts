@@ -10,12 +10,13 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { CapitalizePipe } from './pipes/capitalize.pipe';
 
 
 
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent ],
   entryComponents: [],
   imports: [
     BrowserModule,

@@ -1,7 +1,7 @@
 import { AddCategoryComponent } from './../../components/add-category/add-category.component';
 import { Beverage } from './../../api/models/beverage';
 import { Component, OnInit, Directive } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { ModalController, AlertController } from '@ionic/angular';
 import { BeverageResourceService } from 'src/app/api/services';
 
 @Component({
@@ -16,17 +16,40 @@ export class BeveragePage implements OnInit {
   editable =  true;
 
   constructor(public modalController: ModalController,
-              private beverageService: BeverageResourceService) { }
-              myStyles: Object = { showUsername: false };
+              private beverageService: BeverageResourceService,
+              private alert: AlertController) { }
+
 
   ngOnInit() {
     this.beverageService.getAllBeveragesUsingGET().subscribe(bev => this.beverages = bev);
   }
-  async presentModal() {
+
+  async presentModal(beverage, updateTrue?) {
+    let update = updateTrue ? true : false;
     const modal = await this.modalController.create({
-      component: AddCategoryComponent
+      component: AddCategoryComponent,
+      componentProps : {
+        beverages: beverage,
+        updateMode: update
+      }
     });
-    modal.onDidDismiss().then(data => this.beverages.push(data.data));
+    modal.onDidDismiss().then(res => {
+      console.log('Result', res);
+
+      if (res.data !== undefined) {
+        this.beverages.forEach(data => {
+          console.log(res + 'data');
+          if (data.id === beverage.id) {
+            update = true;
+            this.beverages[this.beverages.indexOf(data)] = res.data;
+          }
+       });
+        if (!update && res.data) {
+        this.beverages.push(res.data);
+       }
+
+      }
+    });
     return await modal.present();
   }
   delete(id) {
@@ -34,10 +57,24 @@ export class BeveragePage implements OnInit {
     this.beverages = this.beverages.filter(bev => bev.id !== id);
 
   }
-  update(bev) {
-    this.beverageService.updateBeverageUsingPUT(bev).subscribe();
+  async presentAlertConfirm(id) {
+    const alert = await this.alert.create({
+      header: 'Delete',
+      message: 'Are you sure ?',
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel'
+        }, {
+          text: 'Yes',
+          handler: () => {
+            this.delete(id);
+          }
+        }
+      ]
+    });
 
-
+    await alert.present();
   }
 
   toggleEditable() {
