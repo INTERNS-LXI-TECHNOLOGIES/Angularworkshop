@@ -27,6 +27,18 @@ const routes: Routes = [
     path: 'order',
     loadChildren: () => import('./pages/order/order.module').then( m => m.OrderPageModule)
   },
+  {
+    path: 'beverageproduct',
+    loadChildren: () => import('./pages/beverageproduct/beverageproduct.module').then( m => m.BeverageproductPageModule)
+  },
+  {
+    path: 'test',
+    loadChildren: () => import('./pages/test/test.module').then( m => m.TestPageModule)
+  },
+  {
+    path: 'revieworder',
+    loadChildren: () => import('./pages/revieworder/revieworder.module').then( m => m.RevieworderPageModule)
+  },
 
 ];
 

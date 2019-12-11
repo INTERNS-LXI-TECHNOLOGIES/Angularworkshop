@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>beverage</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-card *ngFor="let b of beverages">
+  <ion-card-content>
+    <ion-item>
+      <ion-input>{{b.name | titlecase}}</ion-input>
+      <ion-input>{{b.price | currency}}</ion-input>
+      <ion-buttons><ion-icon ios="ios-add" md="md-add" (click)="order(beverages)"></ion-icon></ion-buttons>
+    </ion-item>
+  </ion-card-content>
+</ion-card>
+</ion-content>

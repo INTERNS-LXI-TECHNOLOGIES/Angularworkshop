@@ -10,13 +10,15 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BarcodePipe } from './pipes/barcode.pipe';
+import { StructuralDirective } from './directives/structural.directive';
+// import { AttributeDirective } from './directives/attribute.directive';
 // import { MypipePipe } from './mypipe.pipe';
 
 
 
 
 @NgModule({
-  declarations: [AppComponent, BarcodePipe],
+  declarations: [AppComponent, BarcodePipe, StructuralDirective],
   entryComponents: [],
   imports: [
     BrowserModule,
