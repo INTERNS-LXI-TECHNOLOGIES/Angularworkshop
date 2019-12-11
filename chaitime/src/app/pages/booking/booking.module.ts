@@ -1,3 +1,4 @@
+import { OderingPipe } from './../../pipes/odering.pipe';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -15,6 +16,6 @@ import { BookingPage } from './booking.page';
     IonicModule,
     BookingPageRoutingModule
   ],
-  declarations: [BookingPage]
+  declarations: [BookingPage, OderingPipe]
 })
 export class BookingPageModule {}

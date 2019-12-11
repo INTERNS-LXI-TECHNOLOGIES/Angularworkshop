@@ -1,4 +1,6 @@
+import { OderingPipe } from 'src/app/pipes/odering.pipe';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-booking',
@@ -7,9 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookingPage implements OnInit {
 
-  constructor() { }
-
+  constructor() {
+  const oderingpipe = new OderingPipe();
+  }
   ngOnInit() {
   }
-
 }

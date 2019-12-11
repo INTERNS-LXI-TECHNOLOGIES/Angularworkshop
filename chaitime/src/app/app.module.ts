@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { StructuralDirective } from './Directives/structural.directive';
+import { OderingPipe } from './pipes/odering.pipe';
 
 @NgModule({
   declarations: [AppComponent],
