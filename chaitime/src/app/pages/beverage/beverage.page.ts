@@ -47,7 +47,6 @@ export class BeveragePage implements OnInit {
     this.beverageResourceService.deleteBeverageUsingDELETE(id).subscribe();
     this.beverages = this.beverages.filter(bev => id !== bev.id);
   }
-  
   async presentAlertConfirm(id) {
     const alert = await this.alert.create({
       header: 'Delete',
