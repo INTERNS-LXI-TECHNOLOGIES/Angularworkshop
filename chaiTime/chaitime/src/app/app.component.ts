@@ -20,7 +20,13 @@ export class AppComponent {
       title: 'Catagory',
       url: '/catagory',
       icon: 'clipboard'
+    },
+    {
+      title: 'Order',
+      url: '/order',
+      icon: 'cart'
     }
+
   ];
 
   constructor(

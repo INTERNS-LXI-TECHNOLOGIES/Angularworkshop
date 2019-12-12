@@ -1,6 +1,6 @@
 import { Beverage } from './../api/models/beverage';
 import { Component, ViewChild } from '@angular/core';
-import { IonSlides } from '@ionic/angular';
+import { IonSlides, NavController, IonSegmentButton } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -9,16 +9,19 @@ import { IonSlides } from '@ionic/angular';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private navcntoller: NavController) {}
   beverages: Beverage [] = [];
 
   @ViewChild('slides', { static: true}) slider: IonSlides;
   segment = 0;
 
-  async segmentChanged(ev: any) {
-    await this.slider.slideTo(this.segment);
+  async segmentChanged(event: any) {
+   // console.log(event.detail.value, '00');
+    this.segment = event;
+
+    this.navcntoller.navigateForward(event.detail.value);
   }
-  async slideChanged() {
-    this.segment = await this.slider.getActiveIndex();
+  async slideChanged(event) {
+    await this.slider.slideTo(this.segment);
   }
 }

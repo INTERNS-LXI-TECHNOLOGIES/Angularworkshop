@@ -1,9 +1,34 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>order</ion-title>
-  </ion-toolbar>
-</ion-header>
+    <ion-toolbar color="light">
+        <ion-buttons slot="start">
+            <ion-menu-button color="primary"></ion-menu-button>
+          </ion-buttons>
+      <ion-title>
+        Order
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
 
 <ion-content>
+
+    <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-buttons [routerLink]="['/itemlist']">
+              <ion-card  class="ion-no-padding" font-weight="bold" color="light">              
+                  <ion-card-header text-center >
+                      <ion-img class="home" src="/assets/hometea.jfif" color="warning"></ion-img>
+                  </ion-card-header>
+                  <ion-card-content color="light" text-center>
+                      <ion-text class="text" font-weight="bold">
+                          <h2>Beverages</h2>
+                      </ion-text>
+                  </ion-card-content>
+                </ion-card>
+            </ion-buttons>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
 
 </ion-content>

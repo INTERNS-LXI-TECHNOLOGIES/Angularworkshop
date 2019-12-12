@@ -15,7 +15,7 @@
         <ion-card-header text-center >
             <ion-img class="home" src="/assets/hometea.jfif" color="warning"></ion-img>
         </ion-card-header>
-        <ion-card-content text-center color="light">
+        <ion-card-content color="light" text-center>
             <ion-text class="text" font-weight="bold">
                 <h2>Coffe</h2>
             </ion-text>
@@ -32,7 +32,7 @@
         <ion-buttons slot="start">           
         </ion-buttons>  
         <ion-toolbar>  
-            <ion-segment (ionChange)="segmentChanged($event)" [(ngModel)]="segment" color="primary">  
+            <ion-segment  (ionChange)="segmentChanged($event)" [(ngModel)]="segment" color="primary">  
               <ion-segment-button value="0">  
                 <ion-label>Home</ion-label>  
                 <ion-icon name="home"></ion-icon>  

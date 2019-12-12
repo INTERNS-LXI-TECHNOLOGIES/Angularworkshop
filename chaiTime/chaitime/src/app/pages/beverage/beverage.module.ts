@@ -22,7 +22,7 @@ import { BeveragePage } from './beverage.page';
     BeveragePageRoutingModule,
     ComponentsModule,
   ],
-  declarations: [BeveragePage,CapitalizePipe],
+  declarations: [BeveragePage, CapitalizePipe],
   entryComponents: [AddCategoryComponent]
 })
 export class BeveragePageModule {}

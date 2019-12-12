@@ -1,0 +1,26 @@
+<ion-header color="light">
+    <ion-toolbar color="light">
+      <ion-title color="secondary" >Beverage</ion-title>
+    </ion-toolbar>
+  </ion-header>  
+  
+  <ion-content>
+      <ion-list >
+        
+          <ion-card *ngFor="let beverage of beverages">
+              <ion-item color="light">
+                <ion-grid> 
+                  <ion-row>
+                   <ion-col><ion-text><p> <strong>{{ beverage.name | titlecase }}</strong>.</p></ion-text></ion-col> 
+                    <ion-col class="rate"><ion-text  > {{beverage.price | currency }}</ion-text></ion-col>
+                    <ion-buttons >
+                    <ion-icon slot="end" ios="ios-add" md="md-add" (click)="order(beverages)">
+                      </ion-icon>
+                    </ion-buttons>
+                  </ion-row>
+                  </ion-grid>
+                  </ion-item>
+                </ion-card>
+                </ion-list>
+  
+  </ion-content>
