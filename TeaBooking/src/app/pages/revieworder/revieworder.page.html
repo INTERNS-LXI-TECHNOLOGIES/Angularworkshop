@@ -1,9 +1,25 @@
+
 <ion-header>
-  <ion-toolbar>
-    <ion-title>revieworder</ion-title>
+  <ion-toolbar color="danger">
+    <ion-item color="danger">
+        <ion-icon ios="ios-arrow-back" md="md-arrow-back" [routerLink]="['/beverageproduct']"></ion-icon>
+        <ion-title>Review Order</ion-title>
+    </ion-item>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
-
+        <ion-item >
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                  <ion-thumbnail item-start>
+                      <img src="assets/Oolongtea.jpg">
+                    </ion-thumbnail>
+              </ion-col>
+              <ion-col><ion-text><h5>Oolong tea</h5></ion-text></ion-col>
+              <ion-col><ion-text><h5>30$</h5></ion-text></ion-col>
+              <ion-buttons><ion-icon slot="end" name="trash"></ion-icon></ion-buttons>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
 </ion-content>

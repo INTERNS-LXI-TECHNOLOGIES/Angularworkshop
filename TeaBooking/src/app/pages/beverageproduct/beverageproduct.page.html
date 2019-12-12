@@ -1,16 +1,22 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>beverage</ion-title>
+
+<ion-toolbar color="danger">
+    <ion-item color="danger">
+        <ion-icon ios="ios-arrow-back" md="md-arrow-back" [routerLink]="['/order']"></ion-icon>
+        <ion-title>beverage</ion-title>
+    </ion-item>
   </ion-toolbar>
-</ion-header>
 
 <ion-content>
 <ion-card *ngFor="let b of beverages">
   <ion-card-content>
     <ion-item>
-      <ion-input>{{b.name | titlecase}}</ion-input>
-      <ion-input>{{b.price | currency}}</ion-input>
-      <ion-buttons><ion-icon ios="ios-add" md="md-add" (click)="order(beverages)"></ion-icon></ion-buttons>
+      <ion-grid>
+        <ion-row>
+          <ion-col><ion-text>{{b.name | titlecase}}</ion-text></ion-col>
+          <ion-col><ion-text>{{b.price | currency}}</ion-text></ion-col>
+          <ion-buttons><ion-icon slot="end" ios="ios-add" md="md-add" (click)="order(beverages)"></ion-icon></ion-buttons>
+        </ion-row>
+      </ion-grid>
     </ion-item>
   </ion-card-content>
 </ion-card>
