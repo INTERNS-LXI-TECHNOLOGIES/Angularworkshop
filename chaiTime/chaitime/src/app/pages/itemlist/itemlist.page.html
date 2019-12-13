@@ -14,8 +14,9 @@
                    <ion-col><ion-text><p> <strong>{{ beverage.name | titlecase }}</strong>.</p></ion-text></ion-col> 
                     <ion-col class="rate"><ion-text  > {{beverage.price | currency }}</ion-text></ion-col>
                     <ion-buttons >
-                    <ion-icon slot="end" ios="ios-add" md="md-add" (click)="order(beverages)">
-                      </ion-icon>
+                      <button clear (click)="incrementQty(beverage)"><ion-icon name="add-circle" ></ion-icon></button>{{currentNumber}}
+                        <button clear (click)="decrementQty(beverage)"><ion-icon name="remove-circle" ></ion-icon></button>
+  
                     </ion-buttons>
                   </ion-row>
                   </ion-grid>
