@@ -1,3 +1,4 @@
+import { Order } from './../../api/models/order';
 import { BeverageResourceService, OrderResourceService } from 'src/app/api/services';
 import { Beverage } from './../../api/models/beverage';
 import { Component, OnInit } from '@angular/core';
@@ -10,15 +11,25 @@ import { Component, OnInit } from '@angular/core';
 export class BeverageproductPage implements OnInit {
 
   beverages: Beverage[] = [];
-  beverage: Beverage = {};
+  orders: Order = {};
+  currentnumber: any;
   constructor(private beverageresource: BeverageResourceService,
-              private orderservice: OrderResourceService) { }
+              private orderservice: OrderResourceService) {
+                this.currentnumber = 1;
+              }
 
   ngOnInit() {
     this.beverageresource.getAllBeveragesUsingGET().subscribe(bev => this.beverages = bev );
   }
-  order(beverage) {
-    this.orderservice.createOrderUsingPOST(beverage).subscribe();
+  order(orders) {
+    this.orderservice.createOrderUsingPOST(orders).subscribe();
+  }
+  increment(i) {
+    this.currentnumber++;
+
+  }
+  decrement(i) {
+    this.currentnumber--;
   }
 
 }

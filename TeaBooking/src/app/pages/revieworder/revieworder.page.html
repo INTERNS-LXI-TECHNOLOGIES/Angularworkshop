@@ -8,7 +8,7 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-        <ion-item >
+        <ion-item *ngFor="let o of orders">
           <ion-grid>
             <ion-row>
               <ion-col>
@@ -16,10 +16,15 @@
                       <img src="assets/Oolongtea.jpg">
                     </ion-thumbnail>
               </ion-col>
-              <ion-col><ion-text><h5>Oolong tea</h5></ion-text></ion-col>
-              <ion-col><ion-text><h5>30$</h5></ion-text></ion-col>
-              <ion-buttons><ion-icon slot="end" name="trash"></ion-icon></ion-buttons>
+              <ion-col><ion-text><h5>{{o.beverages}}</h5></ion-text></ion-col>
+              <ion-col><ion-text><h5></h5></ion-text></ion-col>
+              <ion-buttons><ion-icon slot="end" name="trash" (click)="delete(o.id)"></ion-icon></ion-buttons>
             </ion-row>
           </ion-grid>
         </ion-item>
+        <ion-grid>
+          <ion-row>
+            <ion-col><ion-button expand="full" color="danger">Continue</ion-button></ion-col>
+          </ion-row>
+        </ion-grid>
 </ion-content>
