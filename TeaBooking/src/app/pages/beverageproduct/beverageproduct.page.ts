@@ -15,7 +15,7 @@ export class BeverageproductPage implements OnInit {
   currentnumber: any;
   constructor(private beverageresource: BeverageResourceService,
               private orderservice: OrderResourceService) {
-                this.currentnumber = 1;
+                this.currentnumber = 0;
               }
 
   ngOnInit() {
@@ -29,7 +29,11 @@ export class BeverageproductPage implements OnInit {
 
   }
   decrement(i) {
+    do {
     this.currentnumber--;
-  }
+    }
+    // tslint:disable-next-line: triple-equals
+    while (i == 0);
+}
 
 }

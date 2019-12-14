@@ -39,6 +39,10 @@ const routes: Routes = [
     path: 'revieworder',
     loadChildren: () => import('./pages/revieworder/revieworder.module').then( m => m.RevieworderPageModule)
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
 
 ];
 

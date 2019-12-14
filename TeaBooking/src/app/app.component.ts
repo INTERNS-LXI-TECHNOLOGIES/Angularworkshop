@@ -31,6 +31,11 @@ export class AppComponent {
       title: 'order',
       url: 'tabs/order',
       icon: 'cart'
+    },
+    {
+      title: 'login',
+      url: 'login',
+      icon: 'person'
     }
   ];
 

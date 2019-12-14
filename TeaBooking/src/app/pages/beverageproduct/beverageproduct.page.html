@@ -16,7 +16,7 @@
           <ion-col><ion-text>{{b.name | titlecase}}</ion-text></ion-col>
           <ion-col><ion-text>{{b.price | currency}}</ion-text></ion-col>
           <ion-col col-2.4><ion-icon name="remove-circle" (click)="decrement()"></ion-icon>
-            <ion-text>{{currentnumber}}</ion-text>
+            <ion-col><ion-text>{{currentnumber}}</ion-text></ion-col>
           <ion-icon name="add-circle" (click)="increment()"></ion-icon></ion-col>
           <ion-buttons><ion-icon slot="end" ios="ios-cart" md="md-cart" (click)="order(orders)"></ion-icon></ion-buttons>
         </ion-row>
