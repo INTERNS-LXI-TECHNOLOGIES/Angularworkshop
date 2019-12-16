@@ -10,6 +10,9 @@
 <ion-content>
     <ion-card *ngFor="let beverage of beverages">
       <ion-item> 
+        <ion-avatar>
+        <ion-img src="/assets/icon/teas.jpg"></ion-img> 
+        </ion-avatar>
             <ion-text>{{beverage.name| titlecase }}</ion-text>
             <ion-text slot="end">&#x20B9; {{beverage.price|number:'0.3-5'}}</ion-text>
             <ion-button (click)="presentModal(beverage)" slot="end" fill="non" ><ion-icon slot="icon-only" color="primary" name="create"></ion-icon></ion-button>
