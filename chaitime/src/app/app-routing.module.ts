@@ -22,6 +22,10 @@ const routes: Routes = [
   {
     path: 'beverage',
     loadChildren: () => import('./pages/beverage/beverage.module').then( m => m.BeveragePageModule)
+  },
+  {
+    path: 'loginsignup',
+    loadChildren: () => import('./pages/loginsignup/loginsignup.module').then( m => m.LoginsignupPageModule)
   }
 ];
 

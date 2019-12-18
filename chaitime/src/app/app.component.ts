@@ -31,8 +31,12 @@ export class AppComponent {
       title: 'Beverages',
       url: '/beverage',
       icon: 'wine'
+    },
+    {
+    title: 'login',
+    url: 'loginsignup',
+    icon: 'person'
     }
-
   ];
 
   constructor(

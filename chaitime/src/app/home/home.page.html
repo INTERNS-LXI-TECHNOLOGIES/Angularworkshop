@@ -1,12 +1,11 @@
 
 <div *ngIf="isImage==true">
  <ion-card class="welcome-card">
-  <ion-img class=".1imagesStyle" src="/assets/icon/tea.jpg"> </ion-img>
+  <ion-img class=".imagesStyle" src="/assets/icon/tea.jpg"> </ion-img>
   </ion-card>
   </div>
 
-
-<ion-header>
+<ion-header  *ngIf="isImage==false" >
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
@@ -17,8 +16,8 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div *ngIf="isImage==false">
+<ion-content  *ngIf="isImage==false">
+  <div>
     <ion-card class="welcome-card">
       <img class="imgStyle" src="/assets/icon/images.jpg" alt="" />
       <ion-card-header>
