@@ -18,7 +18,7 @@
           <ion-col col-2.4><ion-icon name="remove-circle" (click)="decrement()"></ion-icon>
             <ion-col><ion-text>{{currentnumber}}</ion-text></ion-col>
           <ion-icon name="add-circle" (click)="increment()"></ion-icon></ion-col>
-          <ion-buttons><ion-icon slot="end" ios="ios-cart" md="md-cart" (click)="order(orders)"></ion-icon></ion-buttons>
+          <ion-buttons><ion-icon slot="end" ios="ios-cart" md="md-cart" (click)="orderb(beverages)"></ion-icon></ion-buttons>
         </ion-row>
       </ion-grid>
     </ion-item>
@@ -26,7 +26,7 @@
 </ion-card>
     <ion-grid>
       <ion-row> 
-        <ion-col><ion-button expand="full" color="danger" [routerLink]="['/revieworder']">
+        <ion-col><ion-button expand="full" color="danger" [routerLink]="['/revieworder']" (click)="order(orders)">
         <ion-text class="review">Review</ion-text></ion-button></ion-col>
       </ion-row>
     </ion-grid>

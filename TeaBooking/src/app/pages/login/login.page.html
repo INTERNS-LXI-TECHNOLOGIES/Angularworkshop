@@ -9,7 +9,7 @@
 
 <ion-content class="background">
   <div class="container">
-    <ion-segment (ionChange)="slide($event)"  [value]="value" color="danger">
+    <ion-segment (ionChange)="slide($event)" [value]="value" color="danger">
       <ion-segment-button value="login">
         <h5 color="danger">Login</h5>
       </ion-segment-button>
@@ -18,75 +18,77 @@
       </ion-segment-button>
     </ion-segment>
 
-
-<ion-slides #slides (ionSlideDidChange)="slideChange()">
-  <ion-slide>
-    <form [formGroup]="loginForm">
-      <ion-avatar class="image">
-        <img src="assets/symbol.png" />
-      </ion-avatar>
-      <div class="bg-blur rounded" lines="none">
-        <ion-input
-          formControlName="username"
-          placeholder="User Name"
-        ></ion-input>
-      </div>
-      <div class="margin rounded" lines="none">
-        <ion-input
-          formControlName="password"
-          type="password"
-          placeholder="Password"
-        ></ion-input>
-      </div>
-      <div class="forgot"><h6>FORGOT PASSWORD?</h6></div>
-      <div>
-        <ion-button color="danger" expand="block"><h5>LOGIN</h5></ion-button>
-      </div>
-    </form>
-  </ion-slide>
-  <ion-slide>
-    <form [formGroup]="loginForm">
-      <ion-avatar class="image">
-        <img src="assets/symbol.png" />
-      </ion-avatar>
-      <div class="bg-blur rounded" lines="none">
-        <ion-input
-         formControlName="firstname" 
-          placeholder="First Name"
-        ></ion-input>
-        <!-- [(ngModel)]="user.firstName" -->
-      </div>
-      <div class="bg-blur rounded" lines="none">
-        <ion-input
-         formControlName="lastname" 
-          placeholder="Last Name"
-        ></ion-input>
-        <!-- [(ngModel)]="user.lastName"  -->
-      </div>
-      <div class="bg-blur rounded" lines="none">
-        <ion-input
-          formControlName="email"
-          placeholder="Email Id"
-        ></ion-input>
-        <!-- [(ngModel)]="user.email" -->
-      </div>
-      <div class="bg-blur rounded" lines="none">
-        <ion-input
-          formControlName="password"
-          type="password"
-          placeholder="Password"
-        ></ion-input>
-      </div>
-      <div>
-        <ion-button color="danger" expand="block" (click)="register()"><h5>REGISTER</h5></ion-button>
-      </div>
-    </form>
-  </ion-slide>
-</ion-slides>
-</div>
+    <ion-slides #slides (ionSlideDidChange)="slideChange()">
+      <ion-slide>
+        <form [formGroup]="loginForm">
+          <ion-avatar class="image">
+            <img src="assets/symbol.png" />
+          </ion-avatar>
+          <div class="bg-blur rounded" lines="none">
+            <ion-input
+              formControlName="emailid"
+              placeholder="Email Id"
+            ></ion-input>
+          </div>
+          <ion-text  class="err-size ion-margin-start" color="danger" *ngIf="loginForm.get('emailid').invalid && showLoginError">EmailId Required</ion-text>
+          <div class="margin rounded" lines="none">
+            <ion-input
+              formControlName="password"
+              type="password"
+              placeholder="Password"
+            ></ion-input>
+          </div>
+          <ion-text  class="err-size ion-margin-start" color="danger" *ngIf="loginForm.get('password').invalid && showLoginError">Password Required</ion-text>
+          <div class="forgot"><h6>FORGOT PASSWORD?</h6></div>
+          <div>
+            <ion-button color="danger" expand="block" (click)="login()"
+              ><h5>LOGIN</h5></ion-button>
+          </div>
+        </form>
+      </ion-slide>
+      <ion-slide>
+        <form [formGroup]="signupForm">
+          <ion-avatar class="image">
+            <img src="assets/symbol.png" />
+          </ion-avatar>
+          <div class="bg-blur rounded" lines="none">
+            <ion-input
+              formControlName="firstname"
+              placeholder="First Name"
+            ></ion-input>
+            <!-- [(ngModel)]="user.firstName" -->
+          </div>
+          <ion-text  class="err-size ion-margin-start" color="danger" *ngIf="signupForm.get('firstname').invalid && showSignupError">FirstName Required</ion-text>
+          <div class="bg-blur rounded" lines="none">
+            <ion-input
+              formControlName="lastname"
+              placeholder="Last Name"
+            ></ion-input>
+            <!-- [(ngModel)]="user.lastName"  -->
+          </div>
+          <ion-text  class="err-size ion-margin-start" color="danger" *ngIf="signupForm.get('lastname').invalid && showSignupError">LastName Required</ion-text>
+          <div class="bg-blur rounded" lines="none">
+            <ion-input
+              formControlName="email"
+              placeholder="Email Id"
+            ></ion-input>
+            <!-- [(ngModel)]="user.email" -->
+          </div>
+          <ion-text  class="err-size ion-margin-start" color="danger" *ngIf="signupForm.get('email').invalid && showSignupError">EmailId Required</ion-text>
+          <div class="bg-blur rounded" lines="none">
+            <ion-input
+              formControlName="password"
+              type="password"
+              placeholder="Password"
+            ></ion-input>
+          </div>
+          <ion-text  class="err-size ion-margin-start" color="danger" *ngIf="signupForm.get('password').invalid && showSignupError">Password Required</ion-text>
+          <div>
+            <ion-button color="danger" expand="block" (click)="signup()"
+              ><h5>REGISTER</h5></ion-button>
+          </div>
+        </form>
+      </ion-slide>
+    </ion-slides>
+  </div>
 </ion-content>
-
-
-    
- 
-

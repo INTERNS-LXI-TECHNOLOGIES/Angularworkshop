@@ -11,6 +11,7 @@ import { Component, OnInit } from '@angular/core';
 export class BeverageproductPage implements OnInit {
 
   beverages: Beverage[] = [];
+  quantity = [];
   orders: Order = {};
   currentnumber: any;
   constructor(private beverageresource: BeverageResourceService,
@@ -21,19 +22,17 @@ export class BeverageproductPage implements OnInit {
   ngOnInit() {
     this.beverageresource.getAllBeveragesUsingGET().subscribe(bev => this.beverages = bev );
   }
+  orderb(beverages) {
+    this.beverageresource.createBeverageUsingPOST(beverages).subscribe();
+  }
   order(orders) {
     this.orderservice.createOrderUsingPOST(orders).subscribe();
   }
-  increment(i) {
-    this.currentnumber++;
-
+  increment(product) {
+    this.orders.beverages.push(product);
   }
   decrement(i) {
-    do {
-    this.currentnumber--;
-    }
-    // tslint:disable-next-line: triple-equals
-    while (i == 0);
-}
+    
+  }
 
 }
