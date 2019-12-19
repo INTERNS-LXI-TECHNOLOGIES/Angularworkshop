@@ -1,22 +1,29 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>loginsignup</ion-title>
+    <ion-title></ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-<form>
+
+<form [formGroup]= "signupForm">
+  <ion-avatar class="imgStyle">
+    <img  src="assets/avatar.svg">
+  </ion-avatar>
   <ion-item>
         <ion-label position="floating">Username</ion-label>
-        <ion-input></ion-input>
+        <ion-input formControlName="username"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="floating">password</ion-label>
-    <ion-input></ion-input>
+    <ion-input formControlName="password"></ion-input>
   </ion-item>
   <ion-item>
   <ion-label position="floating">emailId</ion-label>
-  <ion-input></ion-input>
+  <ion-input formControlName="email"></ion-input>
 </ion-item>
 </form>
+<ion-item>
+  <ion-button slot="end" color="success">sign Up</ion-button>
+</ion-item>
 </ion-content>
