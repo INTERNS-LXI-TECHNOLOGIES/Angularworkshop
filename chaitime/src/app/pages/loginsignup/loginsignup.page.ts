@@ -19,18 +19,24 @@ export class LoginsignupPage implements OnInit {
   signupForm = new FormGroup({
   username: new FormControl('' , [
       Validators.required,
-      Validators.minLength(3)
+      Validators.minLength(3),
+      Validators.required
     ]),
     password: new FormControl('', [
       Validators.required
     ]),
     email: new FormControl('', [
       Validators.required,
-      Validators.email
+      Validators.email,
+      Validators.required
     ]),
   });
 
   ngOnInit() {
+  }
+
+  submit() {
+    this.showErrorSignup = true;
   }
 
 }

@@ -14,16 +14,19 @@
         <ion-label position="floating">Username</ion-label>
         <ion-input formControlName="username"></ion-input>
   </ion-item>
+  <ion-text  class="err-size ion-margin-start" color="danger" *ngIf="signupForm.get('username').invalid && showErrorSignup">Username Required</ion-text>
   <ion-item>
     <ion-label position="floating">password</ion-label>
     <ion-input formControlName="password"></ion-input>
   </ion-item>
+  <ion-text  class="err-size ion-margin-start" color="danger" *ngIf="signupForm.get('username').invalid && showErrorSignup">password Required</ion-text>
   <ion-item>
   <ion-label position="floating">emailId</ion-label>
   <ion-input formControlName="email"></ion-input>
 </ion-item>
+<ion-text  class="err-size ion-margin-start" color="danger" *ngIf="signupForm.get('username').invalid && showErrorSignup">emailid Required</ion-text>
 </form>
 <ion-item>
-  <ion-button slot="end" color="success">sign Up</ion-button>
+  <ion-button (click)="submit()"   slot="end" color="success">sign Up</ion-button>
 </ion-item>
 </ion-content>
