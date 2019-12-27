@@ -8,9 +8,25 @@
 </ion-header>
 
 <ion-content>
- 
-</ion-content>
 
+    <ion-card *ngFor="let beverage of beverages">
+      <ion-item> 
+        <ion-grid>
+          <ion-row>
+        <ion-avatar>
+       <ion-col> <ion-img src="/assets/icon/teas.jpg"></ion-img> </ion-col>
+        </ion-avatar>
+        <ion-col><ion-text>{{beverage.name| titlecase }}</ion-text></ion-col>
+        <ion-col><ion-text slot="end">&#x20B9; {{beverage.price|number:'0.3-5'}}</ion-text> </ion-col>
+        <!--<ion-col><ion-button (click)="createOder()" fill="non" color="blue"><ion-icon  ios="ios-add-circle" md="md-add-circle"></ion-icon></ion-button></ion-col>-->
+        <ion-col><ion-button ng-click="count = count+1" ng-init="count=0" fill="non" color="blue"><ion-icon  ios="ios-add-circle" md="md-add-circle"></ion-icon></ion-button></ion-col>
+        <ion-col>{{count}}</ion-col>
+        <ion-col><ion-button fill="non" color="blue"><ion-icon name="remove-circle"></ion-icon></ion-button></ion-col>
+      </ion-row>
+      </ion-grid>    
+      </ion-item>
+      </ion-card>
+</ion-content>
 <p>{{2 | odering: 12}}</p>
 <ion-footer>
   <ion-button  expand="block" shape="round" fill="outline" type="submit">Submit</ion-button>
