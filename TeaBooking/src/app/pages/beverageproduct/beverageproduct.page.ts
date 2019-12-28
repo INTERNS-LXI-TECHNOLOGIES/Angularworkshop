@@ -10,29 +10,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BeverageproductPage implements OnInit {
 
-  beverages: Beverage[] = [];
-  quantity = [];
-  orders: Order = {};
-  currentnumber: any;
   constructor(private beverageresource: BeverageResourceService,
               private orderservice: OrderResourceService) {
                 this.currentnumber = 0;
               }
 
+  beverages: Beverage[] = [];
+  quantity = [];
+  orders: Order = {};
+  currentnumber: any;
+  i : any;
+
   ngOnInit() {
-    this.beverageresource.getAllBeveragesUsingGET().subscribe(bev => this.beverages = bev );
+    this.beverageresource.getAllBeveragesUsingGET().subscribe(bev => {
+      this.beverages = bev ;
+      bev.forEach(_ => this.quantity.push(0));
+    });
   }
-  orderb(beverages) {
+  buy(beverages) {
+    
     this.beverageresource.createBeverageUsingPOST(beverages).subscribe();
   }
-  order(orders) {
+  review(orders) {
     this.orderservice.createOrderUsingPOST(orders).subscribe();
   }
   increment(product) {
-    this.orders.beverages.push(product);
-  }
-  decrement(i) {
-    
-  }
 
+    const index = this.beverages.indexOf(product);
+    console.log(this.quantity);
+    this.quantity[index] = this.quantity[index] + 1;
+    // this.orders.beverages.push(product);
+  }
+  decrement(product) {
+
+}
 }

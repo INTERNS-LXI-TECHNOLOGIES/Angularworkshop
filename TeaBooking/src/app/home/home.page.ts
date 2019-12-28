@@ -30,7 +30,7 @@ isImage = true;
       duration: 2000,
       // message: 'Please wait...',
       translucent: true,
-      cssClass: 'custom-class custom-loading'
+      // cssClass: 'custom-class custom-loading'
     });
     return await loading.present();
   }

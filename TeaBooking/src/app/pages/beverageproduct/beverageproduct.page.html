@@ -8,7 +8,7 @@
   </ion-toolbar>
 
 <ion-content>
-<ion-card *ngFor="let b of beverages">
+<ion-card *ngFor="let b of beverages ; let i = index">
   <ion-card-content>
     <ion-item>
       <ion-grid>
@@ -16,9 +16,8 @@
           <ion-col><ion-text>{{b.name | titlecase}}</ion-text></ion-col>
           <ion-col><ion-text>{{b.price | currency}}</ion-text></ion-col>
           <ion-col col-2.4><ion-icon name="remove-circle" (click)="decrement()"></ion-icon>
-            <ion-col><ion-text>{{currentnumber}}</ion-text></ion-col>
-          <ion-icon name="add-circle" (click)="increment()"></ion-icon></ion-col>
-          <ion-buttons><ion-icon slot="end" ios="ios-cart" md="md-cart" (click)="orderb(beverages)"></ion-icon></ion-buttons>
+            <ion-col><ion-text>{{quantity[i]}}</ion-text></ion-col>
+          <ion-icon name="add-circle" (click)="increment(b)"></ion-icon></ion-col>
         </ion-row>
       </ion-grid>
     </ion-item>
@@ -26,8 +25,10 @@
 </ion-card>
     <ion-grid>
       <ion-row> 
-        <ion-col><ion-button expand="full" color="danger" [routerLink]="['/revieworder']" (click)="order(orders)">
-        <ion-text class="review">Review</ion-text></ion-button></ion-col>
+        <ion-col><ion-button expand="full" color="danger"  (click)="buy()">buy</ion-button></ion-col>
+        <ion-col><ion-button expand="full" color="danger" [routerLink]="['/revieworder']" (click)="review(orders)">
+        <ion-text class="review">review</ion-text></ion-button></ion-col>
+        
       </ion-row>
     </ion-grid>
 </ion-content>
