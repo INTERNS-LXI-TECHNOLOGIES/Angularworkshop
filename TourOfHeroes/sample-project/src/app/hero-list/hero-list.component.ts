@@ -7,14 +7,17 @@ import { HeroService } from '../hero.service';
 })
 export class HeroListComponent implements OnInit {
   hero:string[] ;
-  constructor(private heroService:HeroService) { }
+
+  constructor(private hs :HeroService ) {
+    this.getheros();
+   }
 
   ngOnInit(): void {
   }
   getheros()
   {
 
-  this.hero=this.heroService.getheros()
+  this.hero=this.hs.getheros()
   }
 
 }
