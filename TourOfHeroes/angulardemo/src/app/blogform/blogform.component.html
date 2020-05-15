@@ -1,0 +1,19 @@
+<div class ="card card-block container text-center">
+    <h4 class="card-title">Create Blog</h4>
+    <form #blogform='ngForm' (submit)='insert(blogform.value)'>
+        <div class="form-group">
+            <input type="text" class="form-control" name="title" placeholder="Enter the title" required>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="description" placeholder="Enter the description" required>
+        </div>
+        <div class="form-group">
+            <select name='category'>
+                <option value="default">Select a category</option>
+                <option *ngFor="let category of categories"
+                    value="{{}category}">{{category}}</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-secondary">Create</button>
+    </form>
+</div>

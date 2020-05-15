@@ -1,5 +1,5 @@
 export class Blog{
-    constructor(private id:number,
+    constructor(public id:number,
         private title:string,
         private description:string,
         private category:string){}

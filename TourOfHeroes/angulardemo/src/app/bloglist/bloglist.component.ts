@@ -14,7 +14,7 @@ export class BloglistComponent implements OnInit {
 
   }
 
-  ngOnInit(): void {
+  ngOnInit(){
     this.blogs=blogs;
   }
 
